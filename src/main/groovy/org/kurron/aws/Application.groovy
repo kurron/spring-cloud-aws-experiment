@@ -19,7 +19,6 @@ package org.kurron.aws
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.context.annotation.ImportResource
 
 /**
  * Main driver and configuration for the application.
@@ -27,7 +26,7 @@ import org.springframework.context.annotation.ImportResource
 @SpringBootApplication
 @EnableConfigurationProperties( ApplicationProperties )
 //@EnableContextInstanceData
-@ImportResource( locations = ['classpath:config/aws-context.xml'] )
+//@ImportResource( locations = ['classpath:config/aws-context.xml'] )
 class Application {
 
     /**
