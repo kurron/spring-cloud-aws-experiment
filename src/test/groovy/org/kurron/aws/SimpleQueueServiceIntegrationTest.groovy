@@ -28,7 +28,7 @@ import spock.lang.Ignore
 import spock.lang.Specification
 
 /**
- * An example showing how we can manage S3 resources.
+ * An example showing how we can utilize a message queue.
  **/
 @ContextConfiguration( loader = SpringApplicationContextLoader, classes = [Application] )
 class SimpleQueueServiceIntegrationTest extends Specification implements GenerationAbility {
