@@ -43,8 +43,8 @@
     </appender>
 
     <logger name="org.kurron" level="ALL"/>
-    <logger name="com.amazonaws" level="ALL"/>
-    <logger name="org.springframework.cloud.aws" level="ALL"/>
+    <logger name="com.amazonaws" level="WARN"/>
+    <logger name="org.springframework.cloud.aws" level="WARNN"/>
 
     <root level="INFO">
         <appender-ref ref="ASYNC-CONSOLE"/>

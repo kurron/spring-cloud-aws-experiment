@@ -24,6 +24,7 @@ import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate
 import org.springframework.messaging.Message
 import org.springframework.messaging.support.MessageBuilder
 import org.springframework.test.context.ContextConfiguration
+import spock.lang.Ignore
 import spock.lang.Specification
 
 /**
@@ -40,6 +41,7 @@ class SimpleQueueServiceIntegrationTest extends Specification implements Generat
     @Autowired
     private AmazonSQS amazonSqs
 
+    @Ignore
     def 'exercise send and receive'() {
         given: 'a new template'
         def template = new QueueMessagingTemplate( amazonSqs )
@@ -55,4 +57,20 @@ class SimpleQueueServiceIntegrationTest extends Specification implements Generat
         justHeard.payload == random
     }
 
+    def 'exercise message listener bean'() {
+        given: 'a new template'
+        def template = new QueueMessagingTemplate( amazonSqs )
+
+        when: 'we send a message'
+        def source = 'abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        10.times {
+            def random = randomString( 256000, source )
+            Message<String> message  = MessageBuilder.withPayload( random ).setHeaderIfAbsent( 'custom-header', 'Logan' ) .build()
+            template.send( QUEUE_NAME, message )
+        }
+
+        then: 'pretend we just tested something'
+        true
+    }
 }

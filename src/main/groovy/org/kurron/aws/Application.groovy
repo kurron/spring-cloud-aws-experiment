@@ -62,4 +62,9 @@ class Application {
         factory.maxNumberOfMessages = 5
         factory
     }
+
+    @Bean
+    QueueListener queueListener() {
+        new QueueListener()
+    }
 }
