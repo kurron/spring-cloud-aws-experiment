@@ -16,6 +16,7 @@
 
 package org.kurron.aws
 
+import org.kurron.categories.InputStreamEnhancements
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.core.io.ResourceLoader
@@ -41,5 +42,9 @@ class SimpleStorageServiceIntegrationTest extends Specification {
 
         then: 'it matches the well-known fingerprint'
         def stream = resource.getInputStream()
+        def hash = use( InputStreamEnhancements ) { ->
+            stream.toMD5()
+        }
+        hash == '883f832e1e4d452b549cf29252ad4821'
     }
 }

@@ -47,6 +47,7 @@ apply from: "$rootDir/gradle/conflicts.gradle"
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:${groovyVersion}:indy"
+    testCompile "org.kurron:tools-groovy:${toolsGroovyVersion}"
     runtime "net.logstash.logback:logstash-logback-encoder:${logstashLogbackVersion}"
 }
 
