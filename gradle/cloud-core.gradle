@@ -15,9 +15,9 @@
  */
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-cloud-connectors')
-    compile('org.springframework.cloud:spring-cloud-starter-oauth2')
-    compile('org.springframework.cloud:spring-cloud-starter-security')
+//  compile('org.springframework.boot:spring-boot-starter-cloud-connectors')
+//  compile('org.springframework.cloud:spring-cloud-starter-oauth2')
+//  compile('org.springframework.cloud:spring-cloud-starter-security')
     compile('org.springframework.cloud:spring-cloud-starter')
 }
 

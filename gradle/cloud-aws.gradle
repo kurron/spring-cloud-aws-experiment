@@ -16,7 +16,7 @@
 
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-aws')
-    compile('org.springframework.cloud:spring-cloud-starter-aws-jdbc')
+//  compile('org.springframework.cloud:spring-cloud-starter-aws-jdbc')
     compile('org.springframework.cloud:spring-cloud-starter-aws-messaging')
 }
 
