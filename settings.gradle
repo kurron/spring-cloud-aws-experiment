@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-rootProject.name = 'jvm-guy-bare-rest-api'
+rootProject.name = 'spring-cloud-aws-experiment'
