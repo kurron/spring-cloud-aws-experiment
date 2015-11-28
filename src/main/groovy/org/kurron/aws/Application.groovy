@@ -21,6 +21,7 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.aws.context.config.annotation.EnableContextInstanceData
+import org.springframework.context.annotation.ImportResource
 
 /**
  * Main driver and configuration for the application.
@@ -28,6 +29,7 @@ import org.springframework.cloud.aws.context.config.annotation.EnableContextInst
 @SpringBootApplication
 @EnableConfigurationProperties( ApplicationProperties )
 @EnableContextInstanceData
+@ImportResource( locations = ['classpath:config/aws-context.xml'] )
 class Application {
 
     /**
