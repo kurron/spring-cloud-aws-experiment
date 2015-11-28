@@ -32,6 +32,11 @@ import spock.lang.Specification
 @ContextConfiguration( loader = SpringApplicationContextLoader, classes = [Application] )
 class SimpleQueueServiceIntegrationTest extends Specification implements GenerationAbility {
 
+    /**
+     * The SQS queue to use.
+     */
+    public static final String QUEUE_NAME = 'spring-aws-test'
+
     @Autowired
     private AmazonSQS amazonSqs
 
@@ -43,10 +48,10 @@ class SimpleQueueServiceIntegrationTest extends Specification implements Generat
         def source = 'abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZ'
         def random = randomString( 256000, source )
         Message<String> message  = MessageBuilder.withPayload( random ).setHeaderIfAbsent( 'custom-header', 'Logan' ) .build()
-        template.send( 'spring-aws-test', message )
+        template.send( QUEUE_NAME, message )
 
         then: 'we can fetch it'
-        Message<String> justHeard = template.receive( 'spring-aws-test' ) as Message<String>
+        Message<String> justHeard = template.receive( QUEUE_NAME ) as Message<String>
         justHeard.payload == random
     }
 

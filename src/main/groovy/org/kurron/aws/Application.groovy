@@ -16,9 +16,12 @@
 
 package org.kurron.aws
 
+import com.amazonaws.services.sqs.AmazonSQSAsync
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
+import org.springframework.cloud.aws.messaging.config.SimpleMessageListenerContainerFactory
+import org.springframework.context.annotation.Bean
 
 /**
  * Main driver and configuration for the application.
@@ -50,4 +53,13 @@ class Application {
     @Value( '${services/domain:N/A}' )
     private String serviceDomain
 */
+
+    @Bean
+    public SimpleMessageListenerContainerFactory simpleMessageListenerContainerFactory( AmazonSQSAsync amazonSqs ) {
+        def factory = new SimpleMessageListenerContainerFactory()
+        factory.amazonSqs = amazonSqs
+        factory.autoStartup = true
+        factory.maxNumberOfMessages = 5
+        factory
+    }
 }
