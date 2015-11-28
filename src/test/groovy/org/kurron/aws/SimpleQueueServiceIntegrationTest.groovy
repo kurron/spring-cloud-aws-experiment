@@ -35,16 +35,19 @@ class SimpleQueueServiceIntegrationTest extends Specification implements Generat
     @Autowired
     private AmazonSQS amazonSqs
 
-    def 'exercise download'() {
+    def 'exercise send and receive'() {
         given: 'a new template'
         def template = new QueueMessagingTemplate( amazonSqs )
 
         when: 'we send a message'
-        Message<String> message  = MessageBuilder.withPayload( 'bob' ).build()
+        def source = 'abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        def random = randomString( 256000, source )
+        Message<String> message  = MessageBuilder.withPayload( random ).build()
         template.send( 'spring-aws-test', message )
 
         then: 'we can fetch it'
-        false
+        Message<String> justHeard = template.receive( 'spring-aws-test' ) as Message<String>
+        justHeard.payload == random
     }
 
 }
