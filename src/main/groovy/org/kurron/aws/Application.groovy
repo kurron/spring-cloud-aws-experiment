@@ -16,11 +16,9 @@
 
 package org.kurron.aws
 
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.cloud.aws.context.config.annotation.EnableContextInstanceData
 import org.springframework.context.annotation.ImportResource
 
 /**
@@ -28,7 +26,7 @@ import org.springframework.context.annotation.ImportResource
  */
 @SpringBootApplication
 @EnableConfigurationProperties( ApplicationProperties )
-@EnableContextInstanceData
+//@EnableContextInstanceData
 @ImportResource( locations = ['classpath:config/aws-context.xml'] )
 class Application {
 
@@ -40,6 +38,7 @@ class Application {
         SpringApplication.run( Application, args )
     }
 
+/*
     @Value( '${ami-id:N/A}' )
     private String amiId
 
@@ -51,4 +50,5 @@ class Application {
 
     @Value( '${services/domain:N/A}' )
     private String serviceDomain
+*/
 }

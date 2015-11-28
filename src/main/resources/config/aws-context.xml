@@ -21,5 +21,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/cloud/aws/context
         http://www.springframework.org/schema/cloud/aws/context/spring-cloud-aws-context-1.0.xsd">
-    <aws-context:context-resource-loader/>
+<!--
+    <aws-context:context-credentials>
+        <aws-context:simple-credentials access-key="foo" secret-key="bar"/>
+    </aws-context:context-credentials>
+-->
+    <aws-context:context-resource-loader region="us-west-2" />
 </beans>

@@ -1,4 +1,9 @@
 cloud:
     aws:
         region:
+            auto: false
             static: us-west-2
+        credentials:
+            accessKey: foo
+            secretKey: bar
+            instanceProfile: false
