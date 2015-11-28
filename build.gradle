@@ -47,6 +47,7 @@ apply from: "$rootDir/gradle/conflicts.gradle"
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:${groovyVersion}:indy"
+    runtime "net.logstash.logback:logstash-logback-encoder:${logstashLogbackVersion}"
 }
 
 defaultTasks << 'clean'
