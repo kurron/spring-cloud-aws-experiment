@@ -42,7 +42,7 @@ class SimpleQueueServiceIntegrationTest extends Specification implements Generat
         when: 'we send a message'
         def source = 'abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZ'
         def random = randomString( 256000, source )
-        Message<String> message  = MessageBuilder.withPayload( random ).build()
+        Message<String> message  = MessageBuilder.withPayload( random ).setHeaderIfAbsent( 'custom-header', 'Logan' ) .build()
         template.send( 'spring-aws-test', message )
 
         then: 'we can fetch it'
