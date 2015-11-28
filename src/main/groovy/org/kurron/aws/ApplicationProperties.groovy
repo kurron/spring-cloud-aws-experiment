@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-configurations.all {
-    exclude group: 'commons-logging'
-}
+package org.kurron.aws
 
-// Crash tries to suck in its own version of Groovy
-configurations.all {
-    exclude group: 'org.codehaus.groovy', module: 'groovy'
+import org.springframework.boot.context.properties.ConfigurationProperties
+
+/**
+ * Application configuration.
+ */
+@ConfigurationProperties( value = 'example', ignoreUnknownFields = false )
+class ApplicationProperties {
 }
