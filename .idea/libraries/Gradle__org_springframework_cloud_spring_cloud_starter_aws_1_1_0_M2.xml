@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-starter-aws:1.1.0.M2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-aws/1.1.0.M2/3f7c5e8e414c490ccd470474ca7f0bb687651d2f/spring-cloud-starter-aws-1.1.0.M2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-aws/1.1.0.M2/a298f62a77d93d5e953a609ce5e7132b99f8680f/spring-cloud-starter-aws-1.1.0.M2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

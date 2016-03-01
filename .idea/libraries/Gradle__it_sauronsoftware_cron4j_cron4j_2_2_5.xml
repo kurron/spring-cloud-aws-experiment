@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: it.sauronsoftware.cron4j:cron4j:2.2.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.sauronsoftware.cron4j/cron4j/2.2.5/da0dd0edee48b570cd1e23895e0ac80e09eb272b/cron4j-2.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.sauronsoftware.cron4j/cron4j/2.2.5/d6770af24252351880f42657ceaa526e1d331d0c/cron4j-2.2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

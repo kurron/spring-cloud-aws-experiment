@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.mobile/spring-mobile-device/1.1.5.RELEASE/8c4f007c7bfe0dcf9f276fd358c1e42648c78f4d/spring-mobile-device-1.1.5.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.mobile/spring-mobile-device/1.1.5.RELEASE/845bd5dd2acefcedb8df658d803f7114d7f1655a/spring-mobile-device-1.1.5.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-aws-actuator:1.1.0.M2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-aws-actuator/1.1.0.M2/2dc83b487dff36babf03238d8d727ef1cf6961ac/spring-cloud-aws-actuator-1.1.0.M2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-aws-actuator/1.1.0.M2/10eddd4f5fae48a84c5bd756387c036051ba97e2/spring-cloud-aws-actuator-1.1.0.M2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
