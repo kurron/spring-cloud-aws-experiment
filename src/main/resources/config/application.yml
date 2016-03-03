@@ -4,6 +4,6 @@ cloud:
             auto: false
             static: us-west-2
         credentials:
-            accessKey: AKIAJEKU7JJNPYL4TWMQ
-            secretKey: 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
+            accessKey: AKIAIOSFODNN7EXAMPLE
+            secretKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
             instanceProfile: false
